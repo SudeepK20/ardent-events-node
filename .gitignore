@@ -1,0 +1,16 @@
+/app
+/node_modules
+/src/assets/lib/bower_components
+*.DS_Store
+/log
+/logs
+.idea/*
+/release
+release.zip
+npm-debug.log
+/karma_coverage
+/karma_reports
+/prerender
+.project
+runtest-config.json
+/src/components/config/runtest-config.js
