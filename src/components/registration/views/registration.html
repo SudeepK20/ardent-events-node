@@ -1,0 +1,151 @@
+<div class="container">
+    <div class="row">
+        <div class="box">
+                <hr>
+                <h2 class="intro-text text-center">Registration
+                    <strong>form</strong>
+                </h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
+                <div class="row">
+                    <div class="form-group col-lg-8">
+                        <label for="sel1">Event Type</label>
+                        <select class="form-control" ng-model="formOpen" id="sel1" required>
+                            <option>--Select Event Type--</option>
+                            <option value="singles">Badminton Singles</option>
+                            <option value="doubles">Badminton Doubles</option>
+                        </select>
+
+                        <!--<select class="form-control" id="sel1" ng-model="eventType.event" ng-options="state as state.name for state in type">-->
+                            <!--<option selected>Select</option>-->
+                        <!--</select>-->
+                    </div>
+                </div>
+                <div ng-if="formOpen === 'singles'">
+                    <form role="form" class="singles" ng-submit="addUser()">
+                        <div class="row">
+                            <div class="form-group col-lg-8">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" class="form-control" ng-model="user.firstName">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" class="form-control" ng-model="user.lastName">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="dob">DOB</label>
+                                <input type="text" id="dob" class="form-control" ng-model="user.dob">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label>Gender</label>
+                                <div class="radio">
+                                    <label for="male"><input type="radio" id = "male" name="gender" ng-model="user.gender">Male</label>
+                                    <label for="female"><input type="radio" id = "female" name="gender"  ng-model="user.gender">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="organisation">Organisation</label>
+                                <input type="text" id="organisation" class="form-control" ng-model="user.organisation">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" ng-model="user.email">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="mobileNumber">Mobile Number</label>
+                                <input type="tel" id="mobileNumber" class="form-control" ng-model="user.mobileNumber">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <label for="transactionNumber">Transaction Id/Number</label>
+                                <input type="text" id="transactionNumber" class="form-control" ng-model="user.transactionNumber">
+                            </div>
+                            <div class="form-group col-lg-8">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            <div ng-if="formOpen === 'doubles'">
+                <form role="form" class="singles" ng-submit="addUser()">
+                    <div class="row">
+                        <h2 class="col-lg-8"> Player First Details:</h2>
+                        <div class="form-group col-lg-8">
+                            <label for="firstName1">First Name</label>
+                            <input type="text" id="firstName1" class="form-control" ng-model="userDouble.firstName1">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="lastName1">Last Name</label>
+                            <input type="text" id="lastName1" class="form-control" ng-model="userDouble.lastName1">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="dob1">DOB</label>
+                            <input type="text" id="dob1" class="form-control" ng-model="userDouble.dob1">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label>Gender</label>
+                            <div class="radio">
+                                <label for="male1"><input type="radio" id = "male1" name="gender" ng-model="userDouble.gender1">Male</label>
+                                <label for="female1"><input type="radio" id = "female1" name="gender"  ng-model="userDouble.gender1">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="organisation1">Organisation</label>
+                            <input type="text" id="organisation1" class="form-control" ng-model="userDouble.organisation">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="email1">Email Address</label>
+                            <input type="email" id="email1" class="form-control" ng-model="userDouble.email1">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="mobileNumber1">Mobile Number</label>
+                            <input type="tel" id="mobileNumber1" class="form-control" ng-model="userDouble.mobileNumber1">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="transactionNumber1">Transaction Id/Number</label>
+                            <input type="text" id="transactionNumber1" class="form-control" ng-model="userDouble.transactionNumber1">
+                        </div>
+                        <h2 class="col-lg-8"> Player Second Details:</h2>
+                        <div class="form-group col-lg-8">
+                            <label for="firstName2">First Name</label>
+                            <input type="text" id="firstName2" class="form-control" ng-model="userDouble.firstName2">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="lastName2">Last Name</label>
+                            <input type="text" id="lastName2" class="form-control" ng-model="userDouble.lastName2">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="dob1">DOB</label>
+                            <input type="text" id="dob2" class="form-control" ng-model="userDouble.dob2">
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label>Gender</label>
+                            <div class="radio">
+                                <label for="male2"><input type="radio" id = "male2" name="gender" ng-model="userDouble.gender2">Male</label>
+                                <label for="female2"><input type="radio" id = "female2" name="gender"  ng-model="userDouble.gender2">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <label for="organisation2">Organisation</label>
+                            <input type="text" id="organisation2" class="form-control" ng-model="userDouble.organisation2">
+                        </div>
+                        <!--<div class="form-group col-lg-8">-->
+                            <!--<label for="email2">Email Address</label>-->
+                            <!--<input type="email" id="email2" class="form-control" ng-model="userDouble.email2">-->
+                        <!--</div>-->
+                        <!--<div class="form-group col-lg-8">-->
+                            <!--<label for="mobileNumber2">Mobile Number</label>-->
+                            <!--<input type="tel" id="mobileNumber2" class="form-control" ng-model="userDouble.mobileNumber2">-->
+                        <!--</div>-->
+                        <!--<div class="form-group col-lg-8">-->
+                            <!--<label for="transactionNumber2">Transaction Id/Number</label>-->
+                            <!--<input type="text" id="transactionNumber2" class="form-control" ng-model="userDouble.transactionNumber2">-->
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+    </div>
+</div>

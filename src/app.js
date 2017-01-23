@@ -17,7 +17,8 @@
         'ardent-footer',
         'ardent-about',
         'ardent-blog',
-        'ardent-contact'
+        'ardent-contact',
+        'ardent-registration'
     ])
     .config(['$locationProvider','$httpProvider',
         function($locationProvider, $httpProvider) {

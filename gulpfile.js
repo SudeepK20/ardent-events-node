@@ -1,6 +1,5 @@
 
-var serverPort  = 3000,
-	gulp        = require('gulp'),
+var gulp        = require('gulp'),
 	addsrc      = require('gulp-add-src'),
 	browserSync = require('browser-sync').create(),
 	concat      = require('gulp-concat'),
@@ -189,7 +188,6 @@ gulp.task('watch', function () {
 gulp.task('sync', function () {
 
     browserSync.init({
-        port     : serverPort,
         files    : app.all,
         logLevel : 'silent', // info, debug, warn ,silent
 		server   : {
