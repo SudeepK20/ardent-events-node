@@ -13,20 +13,30 @@ angular.module('ardent-registration')
         //     return promise;
         // };
         //
-        // var postUserData = function(data) {
-        //     var promise = $http.post('/userData', data).then(function(response){
-        //         return response.data;
-        //     })
-        //         .catch(function(response){
-        //             return response.data;
-        //         });
-        //     return promise;
-        // };
+        var postUserData = function(data) {
+            var promise = $http.post('/singlePlayerData', data).then(function(response){
+                return response.data;
+            })
+                .catch(function(response){
+                    return response.data;
+                });
+            return promise;
+        };
+
+        var postDoubleUserData = function(data) {
+            var promise = $http.post('/doublePlayerData', data).then(function(response){
+                return response.data;
+            })
+                .catch(function(response){
+                    return response.data;
+                });
+            return promise;
+        };
 
 
         return {
-            // getCarouselSection: getCarouselSection,
-            // postUserData: postUserData
+            postUserData: postUserData,
+            postDoubleUserData: postDoubleUserData
 
         };
     }]);

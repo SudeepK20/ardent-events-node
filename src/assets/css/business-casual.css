@@ -190,3 +190,17 @@ footer p {
         clear: both;
     }
 }
+
+.carousel-content {
+    margin-bottom: 30px;
+}
+
+.carousel-button {
+    background-color: lightcoral;
+    color: floralwhite;
+    border-color: lightcoral;
+}
+
+.carousel-caption {
+    top:0%;
+}

@@ -14,6 +14,21 @@
             url         : '/registration',
             templateUrl : 'views/registration.html',
             controller 	: 'RegistrationController'
+        })
+
+
+            .state('registration-success', {
+
+            url         : '/registration-success?id',
+            templateUrl : 'views/registration-success.html',
+            controller 	: 'RegistrationController'
+        })
+
+            .state('registration-fail', {
+
+            url         : '/registration-fail',
+            templateUrl : 'views/registration-fail.html',
+            controller 	: 'RegistrationController'
         });
     }
 

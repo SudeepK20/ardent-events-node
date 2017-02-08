@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div ng-if="formOpen === 'singles'">
-                    <form role="form" class="singles" ng-submit="addUser()">
+                    <form role="form" class="singles" ng-submit="addSingleUser()">
                         <div class="row">
                             <div class="form-group col-lg-8">
                                 <label for="firstName">First Name</label>
@@ -39,8 +39,8 @@
                             <div class="form-group col-lg-8">
                                 <label>Gender</label>
                                 <div class="radio">
-                                    <label for="male"><input type="radio" id = "male" name="gender" ng-model="user.gender">Male</label>
-                                    <label for="female"><input type="radio" id = "female" name="gender"  ng-model="user.gender">Female</label>
+                                    <label for="male"><input type="radio" id = "male" name="gender" ng-model="user.gender" value="male">Male</label>
+                                    <label for="female"><input type="radio" id = "female" name="gender" ng-model="user.gender" checked value="female">Female</label>
                                 </div>
                             </div>
                             <div class="form-group col-lg-8">
@@ -66,7 +66,7 @@
                     </form>
                 </div>
             <div ng-if="formOpen === 'doubles'">
-                <form role="form" class="singles" ng-submit="addUser()">
+                <form role="form" class="singles" ng-submit="addDoubleUser()">
                     <div class="row">
                         <h2 class="col-lg-8"> Player First Details:</h2>
                         <div class="form-group col-lg-8">
@@ -84,13 +84,13 @@
                         <div class="form-group col-lg-8">
                             <label>Gender</label>
                             <div class="radio">
-                                <label for="male1"><input type="radio" id = "male1" name="gender" ng-model="userDouble.gender1">Male</label>
-                                <label for="female1"><input type="radio" id = "female1" name="gender"  ng-model="userDouble.gender1">Female</label>
+                                <label for="male1"><input type="radio" id = "male1" name="gender" ng-model="userDouble.gender1" value="male">Male</label>
+                                <label for="female1"><input type="radio" id = "female1" name="gender"  ng-model="userDouble.gender1" value="female">Female</label>
                             </div>
                         </div>
                         <div class="form-group col-lg-8">
                             <label for="organisation1">Organisation</label>
-                            <input type="text" id="organisation1" class="form-control" ng-model="userDouble.organisation">
+                            <input type="text" id="organisation1" class="form-control" ng-model="userDouble.organisation1">
                         </div>
                         <div class="form-group col-lg-8">
                             <label for="email1">Email Address</label>
@@ -120,8 +120,8 @@
                         <div class="form-group col-lg-8">
                             <label>Gender</label>
                             <div class="radio">
-                                <label for="male2"><input type="radio" id = "male2" name="gender" ng-model="userDouble.gender2">Male</label>
-                                <label for="female2"><input type="radio" id = "female2" name="gender"  ng-model="userDouble.gender2">Female</label>
+                                <label for="male2"><input type="radio" id = "male2" name="gender" ng-model="userDouble.gender2" value="male">Male</label>
+                                <label for="female2"><input type="radio" id = "female2" name="gender"  ng-model="userDouble.gender2" value="female">Female</label>
                             </div>
                         </div>
                         <div class="form-group col-lg-8">
