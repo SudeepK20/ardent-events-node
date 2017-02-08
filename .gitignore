@@ -14,3 +14,6 @@ npm-debug.log
 .project
 runtest-config.json
 /src/components/config/runtest-config.js
+.idea/
+bower_components/
+src/assets/lib/
