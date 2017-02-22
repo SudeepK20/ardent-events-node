@@ -54,7 +54,6 @@ var src = {
 
 		src  : [
 			'src/assets/css/bootstrap.css',
-			'src/assets/css/bootstrap.min.css',
 			'src/assets/css/business-casual.css'
 		],
 

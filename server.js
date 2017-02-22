@@ -1,10 +1,11 @@
+
 var express = require('express');
 
 
 
 var bodyParser = require("body-parser");
-var mongodb = require("mongodb");
-var ObjectID = mongodb.ObjectID;
+// var mongodb = require("mongodb");
+// var ObjectID = mongodb.ObjectID;
 
 
 
@@ -13,26 +14,34 @@ app.use(express.static(__dirname + "/app"));
 app.use(bodyParser.json());
 
 
+
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect("mongodb://127.0.0.1:27017/userData", function (err, database) {
-    if (err) {
-        console.log(err);
-        process.exit(1);
-    }
+// mongodb.MongoClient.connect("mongodb://127.0.0.1:27017/userData", function (err, database) {
+//     if (err) {
+//         console.log(err);
+//         process.exit(1);
+//     }
+//
+//     // Save database object from the callback for reuse.
+//     db = database;
+//     console.log("Database connection ready");
+//
+//     // Initialize the app.
+//     var server = app.listen(process.env.PORT || 3456, function () {
+//         var port = server.address().port;
+//         console.log("App now running on port", port);
+//     });
+// });
 
-    // Save database object from the callback for reuse.
-    db = database;
-    console.log("Database connection ready");
 
     // Initialize the app.
     var server = app.listen(process.env.PORT || 3456, function () {
         var port = server.address().port;
         console.log("App now running on port", port);
     });
-});
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
@@ -49,73 +58,39 @@ function handleError(res, reason, message, code) {
 //
 // });
 
-app.post("/singlePlayerData", function(req, res) {
-    var newContact = req.body;
-
-
-    // if (!(req.body.firstName || req.body.lastName)) {
-    //     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
-    // }
-
-    db.collection("singlePlayerData").insertOne(newContact, function(err, doc) {
-        if (err) {
-            handleError(res, err.message, "Failed to create new contact.");
-        } else {
-            res.status(201).json(doc.ops[0]);
-        }
-    });
-});
-
-app.post("/doublePlayerData", function(req, res) {
-    var newContact = req.body;
-
-
-    // if (!(req.body.firstName || req.body.lastName)) {
-    //     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
-    // }
-
-    db.collection("doublePlayerData").insertOne(newContact, function(err, doc) {
-        if (err) {
-            handleError(res, err.message, "Failed to create new contact.");
-        } else {
-            res.status(201).json(doc.ops[0]);
-        }
-    });
-});
-
-// var mongojs = require('mongojs');
-// var dbUser = mongojs('userData', ['userData']);
-//
-// var bodyParser = require('body-parser');
+// app.post("/singlePlayerData", function(req, res) {
+//     var newContact = req.body;
 //
 //
-// app.use(express.static(__dirname + "/app"));
-// app.use(bodyParser.json());
+//     // if (!(req.body.firstName || req.body.lastName)) {
+//     //     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
+//     // }
 //
-// // app.get('/carouselSection', function (req,res) {
-// //     console.log("Inside get function");
-// //
-// //     db.carouselSection.find(function(error,docs){
-// //         console.log(docs);
-// //         res.json(docs);
-// //     });
-// //
-// // });
-//
-// app.post('/userData', function(req,res) {
-//     console.log(req.body);
-//     dbUser.userData.insert(req.body, function(err, docs){
-//         console.log(docs);
-//         res.json(docs);
-//     })
-//
+//     db.collection("singlePlayerData").insertOne(newContact, function(err, doc) {
+//         if (err) {
+//             handleError(res, err.message, "Failed to create new contact.");
+//         } else {
+//             res.status(201).json(doc.ops[0]);
+//         }
+//     });
 // });
-
-
-// app.listen(3000);
-// console.log("Server running on port 3456");
-
-
+//
+// app.post("/doublePlayerData", function(req, res) {
+//     var newContact = req.body;
+//
+//
+//     // if (!(req.body.firstName || req.body.lastName)) {
+//     //     handleError(res, "Invalid user input", "Must provide a first or last name.", 400);
+//     // }
+//
+//     db.collection("doublePlayerData").insertOne(newContact, function(err, doc) {
+//         if (err) {
+//             handleError(res, err.message, "Failed to create new contact.");
+//         } else {
+//             res.status(201).json(doc.ops[0]);
+//         }
+//     });
+// });
 
 
 
