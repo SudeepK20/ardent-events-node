@@ -2,13 +2,13 @@
 
 ### Setup locally
 
-# Install node, bower in your system.
-# Fork this repository
-# npm install
-# bower install
-# gulp start
-# node server - for starting node server
-# http://localhost - hit on browser
+##### Install node, bower in your system.
+#####  Fork this repository
+###### npm install
+#####  bower install
+#####  gulp start
+#####  node server - for starting node server
+#####  http://localhost - hit on browser
 
 
 *******************************************************************
