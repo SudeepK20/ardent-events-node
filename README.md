@@ -1,5 +1,18 @@
 # ardent-events-node
 
+### Setup locally
+
+# Install node, bower in your system.
+# Fork this repository
+# npm install
+# bower install
+# gulp start
+# node server - for starting node server
+# http://localhost - hit on browser
+
+
+
+
 ### Do not checkin bootstrap.js/Jquery/Angular files in git
 
 ### Setup CDN server locally using apache http server or nginx
