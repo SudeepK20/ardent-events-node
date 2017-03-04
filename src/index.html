@@ -9,13 +9,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <meta property="og:url"           content="http://new-website.com" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Ardent and Sports" />
-    <meta property="og:description"   content="Event Organiser" />
-    <meta property="og:image"         content="http://ardent-events.com/brisbanecricketground.jpg" />
+    <meta property="og:url" content="http://35.154.118.26/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Ardent and Sports"/>
+    <meta property="og:description" content="Event Organiser"/>
+    <meta property="og:image" content="http://ardent-events.com/brisbanecricketground.jpg"/>
     <meta property="fb:app_id" content="1707584749478896"/>
 
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/Mylogo3.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/Mylogo3.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/Mylogo3.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/Mylogo3.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/Mylogo3.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/Mylogo3.png"/>
+    <link rel="icon" type="image/png" href="images/Mylogo3.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/Mylogo3.png" sizes="16x16"/>
 
 
     <!-- Bootstrap Core CSS -->
@@ -25,59 +33,59 @@
     <link href="styles/app.css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+          rel="stylesheet" type="text/css">
     <base href="/">
 </head>
 
 <body>
 
-	<!-- Instantiate app -->
-	<body ng-app="app">
+<!-- Instantiate app -->
+<body ng-app="app">
 
-		<header ardent-header></header>
+<header ardent-header></header>
 
-		<ui-view><!-- Everything gets plugged in here --></ui-view>
+<ui-view><!-- Everything gets plugged in here --></ui-view>
 
-		<footer ardent-footer></footer>
+<footer ardent-footer></footer>
 
-		<!-- gulp-useref to build vendor scripts -->
-		<!-- build:js scripts/vendor.min.js -->
+<!-- gulp-useref to build vendor scripts -->
+<!-- build:js scripts/vendor.min.js -->
 
-        <script src="assets/lib/bower_components/angular/angular.js"></script>
-        <script src="assets/lib/bower_components/angular-base64-upload/dist/angular-base64-upload.min.js"></script>
-        <script src="assets/lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src='assets/lib/bower_components/angular-cookies/angular-cookies.min.js'></script>
-        <script src="assets/lib/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-        <script src="assets/lib/bower_components/angular-scroll/angular-scroll.js"></script>
-        <script src="assets/lib/bower_components/angular-clipboard/angular-clipboard.js"></script>
-        <script src="assets/lib/bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="assets/lib/bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
-        <script src="assets/lib/bower_components/d3/d3.js"></script>
-        <script src="assets/lib/bower_components/ng-page-title/dist/ng-page-title.min.js"></script>
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/lib/bower_components/angular/angular.js"></script>
+<script src="assets/lib/bower_components/angular-base64-upload/dist/angular-base64-upload.min.js"></script>
+<script src="assets/lib/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src='assets/lib/bower_components/angular-cookies/angular-cookies.min.js'></script>
+<script src="assets/lib/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="assets/lib/bower_components/angular-scroll/angular-scroll.js"></script>
+<script src="assets/lib/bower_components/angular-clipboard/angular-clipboard.js"></script>
+<script src="assets/lib/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="assets/lib/bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+<script src="assets/lib/bower_components/d3/d3.js"></script>
+<script src="assets/lib/bower_components/ng-page-title/dist/ng-page-title.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-		<!-- endbuild -->
-		<script src="scripts/app.min.js"></script>
-        <!--<script>-->
-            <!--$('#carousel').carousel({-->
-                <!--interval: 100 //changes the speed-->
-            <!--})-->
-        <!--</script>-->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1707584749478896";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+<!-- endbuild -->
+<script src="scripts/app.min.js"></script>
+<!--<script>-->
+<!--$('#carousel').carousel({-->
+<!--interval: 100 //changes the speed-->
+<!--})-->
+<!--</script>-->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1707584749478896";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-	</body>
-
-
-
+</body>
 
 
 </body>

@@ -4,12 +4,9 @@ var gulp        = require('gulp'),
 	browserSync = require('browser-sync').create(),
 	concat      = require('gulp-concat'),
 	cssnano     = require('gulp-cssnano'),
-	gulpif      = require('gulp-if'),
-	fallback    = require('connect-history-api-fallback'),
 	filter      = require('gulp-filter'),
 	jshint      = require('gulp-jshint'),
 	plumber     = require('gulp-plumber'),
-	reload      = browserSync.reload,
 	rename      = require('gulp-rename'),
 	rev         = require('gulp-rev'),
 	revReplace  = require('gulp-rev-replace'),
@@ -21,6 +18,7 @@ var gulp        = require('gulp'),
 	uglify      = require('gulp-uglify'),
 	useref      = require('gulp-useref'),
 	zip         = require('gulp-zip');
+
 
 /*=============================
 =            PATHS            =
@@ -191,7 +189,6 @@ gulp.task('sync', function () {
         logLevel : 'silent', // info, debug, warn ,silent
 		server   : {
 			baseDir: app.root,
-			middleware: [fallback()]
         }
 	})
 });
