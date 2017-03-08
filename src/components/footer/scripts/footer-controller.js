@@ -5,5 +5,12 @@ angular.module('ardent-footer')
 
         function ($scope) {
 
+            $scope.OnCLick = function() {
+                FB.ui({
+                    method: 'share',
+                    display: 'popup',
+                    href: 'http://www.ardentsne.com',
+                }, function(response){});
+            };
         }
 	]);

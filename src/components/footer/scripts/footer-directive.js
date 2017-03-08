@@ -12,7 +12,8 @@
 		return {
 
 			restrict     : 'A',
-			templateUrl  : 'views/footer.html'
+			templateUrl  : 'views/footer.html',
+            controller   : 'FooterController'
 		};
 	}
 
