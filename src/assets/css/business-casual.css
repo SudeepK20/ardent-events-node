@@ -262,6 +262,12 @@ footer p {
     margin-left:10px;
 }
 
+.social-share {
+  height: 22px;
+  margin-top: -2px;
+}
 
-
-
+.social-page {
+  height: 25px;
+  margin-top: -2px;
+}
