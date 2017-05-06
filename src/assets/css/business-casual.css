@@ -271,3 +271,7 @@ footer p {
   height: 25px;
   margin-top: -2px;
 }
+
+ol {
+    margin-left: -25px;
+}

@@ -18,7 +18,8 @@
         'ardent-about',
         'ardent-blog',
         'ardent-contact',
-        'ardent-registration'
+        'ardent-registration',
+        'ardent-results'
     ])
     .config(['$locationProvider','$httpProvider',
         function($locationProvider, $httpProvider) {
